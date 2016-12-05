@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo $_SESSION['crf'];
 $reg = '<div class="glass_panel" id="reg_panel">
             <div class="reg_block">
             <button>Регистрация клиента</button>

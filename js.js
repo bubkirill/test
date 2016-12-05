@@ -1,34 +1,45 @@
 $(document).ready(function() {
 
 	$("#auth_panel").hide();
+	var xhr = new XMLHttpRequest();
+
+
+
+
 
 $( "#reg" ).click(function() {
-	if(!$('#email').val().match("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")){
-		alert("Заполните поле с Email");
+
+//xhr.open('POST', 'session.php', false);
+//xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); 
+//xhr.send("fio="+$('#fio').val()+"&email="+$('#email').val()+"&password="+$('#password').val()+"&phone="+$('#phone').val()+"&dopinfo="+$('#dopinfo').val()+"&get_token=123");
+//if (xhr.status == 400) {
+//alert( xhr.status + ': Ошибка заполнения формы');
+//}if (xhr.status == 201) {
+//	alert("ok");
+ if(!$('#email').val().match("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")){
+	alert("Заполните поле с Email");
 	}else{
 	$.ajax({
 		url: "session.php",
-		type: "POST",
 		data: $("#form").serialize(),
 		success: function (data){
-			console.log(data);
+			$('head').append(data);
 			$.ajax({
 				url: "auth.php", 
 				success: function (data){
 				$('#result').html(data);
 	
-  			}
+			}
 			});
 		}
 	});
-	alert('Вы успешно зарегистрировались');
-	function redirect() {
-	    $('#reg_panel').slideUp();
-		$('#auth_panel').slideDown();
-		$('#back').slideDown();
 	}
-	setTimeout(redirect(),1500);
-}
+//}else if (xhr.status == 200){
+//	alert( xhr.status + ': Такой пользователь уже существует');
+//}else{
+//	alert( xhr.status + ': Внутренняя ошибка сервера');
+//}  
+
 });
 
 	$.ajax({
@@ -45,6 +56,5 @@ $( "#reg" ).click(function() {
 	$('#auth_panel').slideUp();
 	$( "#back" ).slideUp();
 });
-
 
 });
