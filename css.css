@@ -1,0 +1,101 @@
+ *{ 
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+ }
+ html{
+     background: url('img/bg.png') no-repeat 100% fixed;
+ }
+ .glass_panel{
+     width: 400px;
+     padding: 15px;
+     margin: 250px auto;
+     background: rgba(255, 255, 255, 0.4);
+     border-radius:5px;
+     border: 1px solid rgba(255, 255, 255, 0.8); 
+ }
+ .reg_block{
+     width: 400px;
+     background: #ffffff;
+     border:1.2px solid rgba(0, 64, 105, 0.5);
+     border-radius: 5px;
+     overflow: hidden;
+ }
+ .reg_block button{
+     width: 400px;
+     background: rgba(0, 64, 105, 0.5);
+     height: 40px;
+     border:none;
+     color: #ffffff;
+ }
+ .reg_block input{
+     margin-top: 5px;
+     width: 400px;
+     height: 30px;
+     padding: 5px;
+     border: none;
+     border-bottom: 1px solid rgba(168, 168, 168, 0.7);
+     background: #ffffff;
+ }
+ .reg_block input:first-child{
+     margin-top:50px;
+ }
+ .reg_block input:last-child {
+     background: rgba(0, 64, 105, 0.5);
+     color: #ffffff;
+     cursor: pointer;
+     height: 40px;
+ }
+ .reg_block input:last-child:hover {
+     background: rgba(0, 64, 105, 0.6);
+ }
+ .reg_block input:nth-last-child(3) {
+     border:none;
+ }
+ .inf_client{
+     width: 400px;
+     background: #ffffff;
+     border:1.2px solid rgba(0, 64, 105, 0.5);
+     border-radius: 5px;
+     overflow: hidden;
+ }
+ .next{
+     margin: auto;
+     width: 300px;
+     height: 50px;
+     cursor: pointer;
+     border: none;
+     background: #6997b4;
+     border-radius: 5px;
+     text-align: center;
+     color:#ffffff;
+     line-height: 50px;
+ }
+ .name{
+     width: 195px;
+     height: 25px;
+     margin-left: 5px;
+     float:left;
+     color:rgba(168, 168, 168, 1);
+ }
+ .result{
+     width: 195px;
+     height:25px;
+     margin-right: 5px;
+     float:right;
+     color:rgba(0, 64, 105, 0.7);
+ }
+ .res_client{
+    width: 400px;
+    height:40px;
+    background: rgba(0, 64, 105, 0.5);
+    height: 40px;
+    border:none;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+
+ }
+            
